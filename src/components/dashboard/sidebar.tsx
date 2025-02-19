@@ -38,8 +38,9 @@ export function Sidebar() {
   return (
     <div
       className={cn(
-        "bg-white dark:bg-gray-800 h-screen transition-all duration-300 ease-in-out",
-        isCollapsed ? "w-16" : "w-64",
+        "bg-white dark:bg-gray-800 transition-all duration-300 ease-in-out",
+        "md:h-screen md:sticky md:top-0",
+        isCollapsed ? "w-full md:w-16" : "w-full md:w-64",
       )}
     >
       <div className="flex justify-between items-center p-4">
@@ -48,11 +49,11 @@ export function Sidebar() {
             SUILANCE
           </Link>
         )}
-        <Button variant="ghost" size="icon" onClick={() => setIsCollapsed(!isCollapsed)}>
+        <Button variant="ghost" size="icon" onClick={() => setIsCollapsed(!isCollapsed)} className="md:hidden">
           <Menu className="h-6 w-6" />
         </Button>
       </div>
-      <nav className="space-y-2 p-2">
+      <nav className={cn("space-y-2 p-2", isCollapsed && "hidden md:block")}>
         {links.map((link) => (
           <Link
             key={link.name}
@@ -60,7 +61,7 @@ export function Sidebar() {
             className={cn(
               "flex items-center space-x-2 px-2 py-2 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700",
               pathname === link.href && "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400",
-              isCollapsed && "justify-center",
+              isCollapsed && "md:justify-center",
             )}
           >
             <link.icon className="w-5 h-5" />
@@ -76,7 +77,7 @@ export function Sidebar() {
           </Avatar>
           {!isCollapsed && <ThemeToggle />}
         </div>
-        <Button variant="outline" className={cn("w-full justify-center", isCollapsed && "p-2")}>
+        <Button variant="outline" className={cn("w-full justify-center", isCollapsed && "md:p-2")}>
           <LogOut className="w-5 h-5" />
           {!isCollapsed && <span className="ml-2">Logout</span>}
         </Button>
