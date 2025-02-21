@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { SuiPayment } from "@/lib/sui-payment"
+//import { SuiPayment } from "@/lib/sui-payment"
 
 interface PaymentModalProps {
   isOpen: boolean
@@ -12,7 +12,7 @@ interface PaymentModalProps {
   receiverAddress: string
 }
 
-export function PaymentModal({ isOpen, onClose, amount, receiverAddress }: PaymentModalProps) {
+export function PaymentModal({ isOpen, onClose, amount }: PaymentModalProps) {
   const [isProcessing, setIsProcessing] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
