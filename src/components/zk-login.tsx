@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
+//import { useState, useEffect } from "react"
+//import { Button } from "@/components/ui/button"
 //import { initiateZkLogin, completeZkLogin } from "@/lib/zk-login"
 
 //interface ZkLoginProps {
@@ -44,13 +44,6 @@ import { Button } from "@/components/ui/button"
   //}
 
   return (
-    <Button
-      onClick={handleZkLogin}
-      disabled={isLoading}
-      className="w-full bg-gradient-to-r from-purple-400 to-pink-600 text-white"
-    >
-      {/* {isLoading ? "Loading..." : "Login with zkLogin"} */}btn
-    </Button>
-  )
+    
 }
 
