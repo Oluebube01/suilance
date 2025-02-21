@@ -43,7 +43,7 @@ const clientLinks = [
 export function Sidebar() {
   const pathname = usePathname()
   const router = useRouter()
-  const [isClient, setIsClient] = useState(false) // This should be determined by user role
+  //const [isClient, setIsClient] = useState(false)  This should be determined by user role
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   const links = isClient ? clientLinks : freelancerLinks
