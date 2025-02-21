@@ -1,44 +1,52 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { usdToSui, formatSui } from "@/lib/currency"
 
-export default function ProfilePage() {
+export default function PayoutPage() {
+  const isClient = false // This should be determined by user role
+
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">Profile</h1>
-      <Card>
-        <CardHeader>
-          <CardTitle>Personal Information</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Avatar className="w-20 h-20">
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <Button>Change Picture</Button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Input placeholder="First Name" />
-            <Input placeholder="Last Name" />
-            <Input placeholder="Email" type="email" />
-            <Input placeholder="Phone Number" type="tel" />
-          </div>
-          <Textarea placeholder="Bio" />
-          <Button className="w-full sm:w-auto">Save Changes</Button>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Portfolio</CardTitle>
-        </CardHeader>
-        <CardContent>
-          {/* Add portfolio items here */}
-          <Button className="w-full sm:w-auto">Add Portfolio Item</Button>
-        </CardContent>
-      </Card>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">{isClient ? "Payments" : "Payout"}</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>{isClient ? "Total Amount Spent" : "Total Amount Received"}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-2xl font-bold">{formatSui(usdToSui(10000))}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Pending Amounts</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-2xl font-bold">{formatSui(usdToSui(2500))}</p>
+          </CardContent>
+        </Card>
+        {!isClient && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Available for Withdrawal</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-2xl font-bold">{formatSui(usdToSui(7500))}</p>
+              <Button className="mt-4">Withdraw</Button>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+      {isClient && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Escrow Balance</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-2xl font-bold">{formatSui(usdToSui(5000))}</p>
+          </CardContent>
+        </Card>
+      )}
     </div>
   )
 }

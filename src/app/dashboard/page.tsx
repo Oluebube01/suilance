@@ -1,5 +1,5 @@
 "use client"
-
+import DashboardLayout from "./layout"
 import type React from "react"
 
 import { useState } from "react"
@@ -82,3 +82,4 @@ function DashboardCard({ title, value, icon }: { title: string; value: number; i
   )
 }
 
+DashboardPage.getLayout = (page: React.ReactNode) => <DashboardLayout>{page}</DashboardLayout>
