@@ -14,34 +14,34 @@ export function ZkLogin({ onSuccess, onError }: ZkLoginProps) {
 
   useEffect(() => {
     // Listen for the zkLogin callback
-    const handleZkLoginCallback = async (event: MessageEvent) => {
-      if (event.data && event.data.type === "zkLoginCallback") {
-        setIsLoading(true)
-        try {
-          const result = await completeZkLogin(event.data.zkProof)
-          onSuccess(result.address)
-        } catch (error) {
-          onError("Failed to complete zkLogin")
-        } finally {
-          setIsLoading(false)
-        }
-      }
-    }
+    //const handleZkLoginCallback = async (event: MessageEvent) => {
+      //if (event.data && event.data.type === "zkLoginCallback") {
+       // setIsLoading(true)
+      //  try {
+         // const result = await completeZkLogin(event.data.zkProof)
+       //   onSuccess(result.address)
+      //  } catch (error) {
+        //  onError("Failed to complete zkLogin")
+    //  } finally {
+     //     setIsLoading(false)
+       // }
+    //  }
+   // }
 
     window.addEventListener("message", handleZkLoginCallback)
     return () => window.removeEventListener("message", handleZkLoginCallback)
   }, [onSuccess, onError])
 
-  const handleZkLogin = async () => {
-    setIsLoading(true)
-    try {
-      await initiateZkLogin()
-    } catch (error) {
-      onError("Failed to initiate zkLogin")
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  //const handleZkLogin = async () => {
+   // setIsLoading(true)
+   // try {
+    //  await initiateZkLogin()
+    //} catch (error) {
+     // onError("Failed to initiate zkLogin")
+ //   } finally {
+     // setIsLoading(false)
+  //  }
+  //}
 
   return (
     <Button
