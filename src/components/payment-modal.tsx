@@ -20,20 +20,20 @@ export function PaymentModal({ isOpen, onClose, amount, receiverAddress }: Payme
     setIsProcessing(true)
     setError(null)
 
-    try {
-      const suiPayment = new SuiPayment()
-      await suiPayment.connectWallet({})
-      const result = await suiPayment.makePayment(amount, receiverAddress)
+   // try {
+    //  const suiPayment = new SuiPayment()
+     // await suiPayment.connectWallet({})
+    //  const result = await suiPayment.makePayment(amount, receiverAddress)
 
-      if (result.success) {
-        onClose()
-      }
-    } catch (err) {
-      setError("Payment failed. Please try again.")
-    } finally {
-      setIsProcessing(false)
-    }
-  }
+    //  if (result.success) {
+      //  onClose()
+      //}
+ //   } catch (err) {
+     // setError("Payment failed. Please try again.")
+  //  } finally {
+      //setIsProcessing(false)
+   // }
+  //}
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
