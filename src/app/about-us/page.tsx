@@ -40,7 +40,7 @@ export default function AboutUsPage() {
               <p className="text-gray-300">
                 At SUILANCE, we envision a future where freelancers and clients collaborate seamlessly in a
                 decentralized ecosystem, free from intermediaries and powered by cutting-edge blockchain technology.
-                We're committed to building a platform that fosters trust, innovation, and fair compensation for all.
+                We are committed to building a platform that fosters trust, innovation, and fair compensation for all.
               </p>
             </CardContent>
           </Card>
