@@ -9,7 +9,7 @@
   //onError: (error: string) => void
 //}
 
-export function ZkLogin{
+export function ZkLogin(){
   //const [isLoading, setIsLoading] = useState(false)
 
   //useEffect(() => {
