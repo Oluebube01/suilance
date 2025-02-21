@@ -9,7 +9,7 @@
   //onError: (error: string) => void
 //}
 
-//export function ZkLogin({ onSuccess, onError }: ZkLoginProps) {
+export function ZkLogin{
   //const [isLoading, setIsLoading] = useState(false)
 
   //useEffect(() => {
@@ -44,6 +44,6 @@
   //}
 
   return (
-    
+    )
 }
 
