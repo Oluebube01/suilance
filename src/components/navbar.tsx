@@ -9,7 +9,6 @@ const navItems = [
   { name: "Find Work", href: "/find-work" },
   { name: "Find Talent", href: "/find-talent" },
   { name: "About Us", href: "/about-us" },
-  { name: "Enterprise", href: "/enterprise" },
 ]
 
 export function Navbar() {

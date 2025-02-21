@@ -18,6 +18,17 @@ Follow these steps to use shadcn/ui components:
    npx shadcn@latest add button
    npx shadcn@latest add input
    npx shadcn@latest add card
+   npx shadcn@latest add avatar
+   npx shadcn@latest add badge
+   npx shadcn@latest add dialog
+   npx shadcn@latest add dropdown
+   npx shadcn@latest add label
+   npx shadcn@latest add select
+   npx shadcn@latest add table
+   npx shadcn@latest add tabs
+   npx shadcn@latest add textarea
+   npx shadcn@latest add toast
+   npx shadcn@latest add use-toast
    // ... and so on for other components
 
 5. Update import statements in your code as shown below.

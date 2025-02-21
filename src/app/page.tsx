@@ -1,4 +1,4 @@
-import { PopularServices } from "@/components/popular-services"
+import { PopularServices } from "@/components/popular-service"
 import { SearchHeader } from "@/components/search-header"
 import { SellerCards } from "@/components/seller-cards"
 import { Footer } from "@/components/footer"
