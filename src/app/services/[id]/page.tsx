@@ -1,7 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ServiceGallery } from "@/components/service-gallery"
-import { ServicePackages } from "@/components/service-packages"
-import { AboutSeller } from "@/components/about-seller"
 import { Reviews } from "@/components/reviews"
 import { ServiceDescription } from "@/components/service-description"
 
