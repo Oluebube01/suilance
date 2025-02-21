@@ -1,12 +1,12 @@
-import { JsonRpcProvider, Network, Ed25519Keypair, RawSigner } from "@mysten/sui.js"
+//import { JsonRpcProvider, Network, Ed25519Keypair, RawSigner } from "@mysten/sui.js"
 
 export class SuiPayment {
-  private provider: JsonRpcProvider
-  private signer: RawSigner | null = null
+ // private provider: JsonRpcProvider
+  //private signer: RawSigner | null = null
 
-  constructor() {
-    this.provider = new JsonRpcProvider(Network.DEVNET)
-  }
+//  constructor() {
+   // this.provider = new JsonRpcProvider(Network.DEVNET)
+ // }
 
   //async connectWallet(zkLoginProof: any) {
    // try {
