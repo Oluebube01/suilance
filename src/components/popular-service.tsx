@@ -30,7 +30,7 @@ const POPULAR_SERVICES = [
 
 export function PopularServices() {
   return (
-    <section className="py-16">
+    <section className="py-16 ml-8">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
           Popular Services

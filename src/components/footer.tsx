@@ -3,8 +3,8 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-black/30 border-t border-white/10 mt-16">
-      <div className="container py-12">
+    <footer className="bg-black/30 border-t border-white/10 mt-16 ">
+      <div className="container py-12 ml-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
