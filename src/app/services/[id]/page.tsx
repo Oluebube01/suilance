@@ -32,10 +32,7 @@ export default function ServicePage() {
           </Tabs>
         </div>
 
-        <div className="lg:col-span-1">
-          <ServicePackages />
-          <AboutSeller />
-        </div>
+        
       </div>
     </div>
   )
