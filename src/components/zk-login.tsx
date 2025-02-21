@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { initiateZkLogin, completeZkLogin } from "@/lib/zk-login"
+//import { initiateZkLogin, completeZkLogin } from "@/lib/zk-login"
 
-interface ZkLoginProps {
-  onSuccess: (address: string) => void
-  onError: (error: string) => void
-}
+//interface ZkLoginProps {
+//  onSuccess: (address: string) => void
+  //onError: (error: string) => void
+//}
 
-export function ZkLogin({ onSuccess, onError }: ZkLoginProps) {
-  const [isLoading, setIsLoading] = useState(false)
+//export function ZkLogin({ onSuccess, onError }: ZkLoginProps) {
+  //const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
+  //useEffect(() => {
     // Listen for the zkLogin callback
     //const handleZkLoginCallback = async (event: MessageEvent) => {
       //if (event.data && event.data.type === "zkLoginCallback") {
@@ -28,9 +28,9 @@ export function ZkLogin({ onSuccess, onError }: ZkLoginProps) {
     //  }
    // }
 
-    window.addEventListener("message", handleZkLoginCallback)
-    return () => window.removeEventListener("message", handleZkLoginCallback)
-  }, [onSuccess, onError])
+   // window.addEventListener("message", handleZkLoginCallback)
+   // return () => window.removeEventListener("message", handleZkLoginCallback)
+ // }, [onSuccess, onError])
 
   //const handleZkLogin = async () => {
    // setIsLoading(true)
@@ -49,7 +49,7 @@ export function ZkLogin({ onSuccess, onError }: ZkLoginProps) {
       disabled={isLoading}
       className="w-full bg-gradient-to-r from-purple-400 to-pink-600 text-white"
     >
-      {isLoading ? "Loading..." : "Login with zkLogin"}
+      {/* {isLoading ? "Loading..." : "Login with zkLogin"} */}btn
     </Button>
   )
 }
