@@ -116,6 +116,15 @@ export default function SignUpPage() {
             </Link>
           </p>
         </CardFooter>
+        <CardFooter>
+        <div>
+          <h4>
+          <Link href="/" className="text-sm text-gray-400 ml-4">
+              Back to home
+          </Link>
+          </h4>
+          </div>
+        </CardFooter>
       </Card>
     </div>
   )

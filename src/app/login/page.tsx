@@ -73,9 +73,11 @@ export default function LoginPage() {
                 className="bg-white/10 border-white/20 text-white"
               />
             </div>
-            <Button type="submit" className="w-full bg-gradient-to-r from-purple-400 to-pink-600 text-white">
+            <Link href="/dashboard">
+            <Button type="submit" className="mt-4 w-full bg-gradient-to-r from-purple-400 to-pink-600 text-white">
               Log in
             </Button>
+            </Link>
           </form>
           <div className="mt-4">
             <div className="relative">
@@ -92,13 +94,25 @@ export default function LoginPage() {
           </div>
         </CardContent>
         <CardFooter className="flex justify-center">
+          <div>
           <p className="text-sm text-gray-400">
             Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-purple-400 hover:text-purple-300">
               Sign up
             </Link>
-          </p>
+          </p> 
+          </div>
         </CardFooter>
+        <CardFooter>
+        <div>
+          <h4>
+          <Link href="/" className="text-sm text-gray-400 ml-4">
+              Back to home
+          </Link>
+          </h4>
+          </div>
+        </CardFooter>
+        
       </Card>
     </div>
   )
