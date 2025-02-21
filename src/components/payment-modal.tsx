@@ -33,7 +33,7 @@ export function PaymentModal({ isOpen, onClose, amount, receiverAddress }: Payme
   //  } finally {
       //setIsProcessing(false)
    // }
-  //}
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
