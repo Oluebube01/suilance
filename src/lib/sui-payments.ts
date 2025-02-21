@@ -8,25 +8,25 @@ export class SuiPayment {
     this.provider = new JsonRpcProvider(Network.DEVNET)
   }
 
-  async connectWallet(zkLoginProof: any) {
-    try {
+  //async connectWallet(zkLoginProof: any) {
+   // try {
       // In a real implementation, we would use the zkLogin proof
       // For now, we'll create a dummy keypair
-      const keypair = new Ed25519Keypair()
-      this.signer = new RawSigner(keypair, this.provider)
-      return true
-    } catch (error) {
-      console.error("Failed to connect wallet:", error)
-      return false
-    }
-  }
+      //const keypair = new Ed25519Keypair()
+    //  this.signer = new RawSigner(keypair, this.provider)
+   //   return true
+   // } catch (error) {
+   //   console.error("Failed to connect wallet:", error)
+    //  return false
+ //   }
+ // }
 
-  async makePayment(amount: number, receiverAddress: string) {
-    if (!this.signer) {
-      throw new Error("Wallet not connected")
-    }
+ // async makePayment(amount: number, receiverAddress: string) {
+  //  if (!this.signer) {
+      //throw new Error("Wallet not connected")
+  //  }
 
-    try {
+   // try {
       // In a real implementation, we would:
       // 1. Create a payment transaction
       // 2. Sign the transaction
@@ -34,14 +34,14 @@ export class SuiPayment {
       // 4. Return the transaction hash
 
       // For now, we'll just return a dummy transaction hash
-      return {
-        success: true,
-        transactionHash: "0x" + Array(64).fill("0").join(""),
-      }
-    } catch (error) {
-      console.error("Payment failed:", error)
-      throw error
-    }
+      //return {
+      //  success: true,
+      //  transactionHash: "0x" + Array(64).fill("0").join(""),
+      //}
+   // } catch (error) {
+      //console.error("Payment failed:", error)
+    // throw error
+   // }
+//  }
   }
-}
 
