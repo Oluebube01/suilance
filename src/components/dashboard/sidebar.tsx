@@ -46,7 +46,7 @@ export function Sidebar() {
   //const [isClient, setIsClient] = useState(false)  This should be determined by user role
   const [isCollapsed, setIsCollapsed] = useState(false)
 
-  const links = isClient ? clientLinks : freelancerLinks
+//  const links = isClient ? clientLinks : freelancerLinks
 
   const handleLogout = () => {
     // Add any logout logic here (clear tokens, state, etc)
