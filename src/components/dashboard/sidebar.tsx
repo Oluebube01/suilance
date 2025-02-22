@@ -30,15 +30,15 @@ const freelancerLinks = [
   { name: "Disputes", href: "/dashboard/disputes", icon: AlertTriangle },
 ]
 
-const clientLinks = [
-  { name: "Home", href: "/dashboard", icon: Home },
-  { name: "Profile", href: "/dashboard/profile", icon: User },
-  { name: "Browse Freelancers", href: "/dashboard/browse-freelancers", icon: Users },
-  { name: "My Projects", href: "/dashboard/projects", icon: Briefcase },
-  { name: "Payments", href: "/dashboard/payments", icon: DollarSign },
-  { name: "Messages", href: "/dashboard/messages", icon: MessageSquare },
-  { name: "Disputes", href: "/dashboard/disputes", icon: AlertTriangle },
-]
+//const clientLinks = [
+  //{ name: "Home", href: "/dashboard", icon: Home },
+  //{ name: "Profile", href: "/dashboard/profile", icon: User },
+ // { name: "Browse Freelancers", href: "/dashboard/browse-freelancers", icon: Users },
+//  { name: "My Projects", href: "/dashboard/projects", icon: Briefcase },
+ // { name: "Payments", href: "/dashboard/payments", icon: DollarSign },
+//  { name: "Messages", href: "/dashboard/messages", icon: MessageSquare },
+//  { name: "Disputes", href: "/dashboard/disputes", icon: AlertTriangle },
+//]
 
 export function Sidebar() {
   const pathname = usePathname()
@@ -46,7 +46,7 @@ export function Sidebar() {
   //const [isClient, setIsClient] = useState(false)  This should be determined by user role
   const [isCollapsed, setIsCollapsed] = useState(false)
 
-//  const links = isClient ? clientLinks : freelancerLinks
+  const links =  freelancerLinks
 
   const handleLogout = () => {
     // Add any logout logic here (clear tokens, state, etc)
