@@ -15,7 +15,6 @@ import {
   AlertTriangle,
   LogOut,
   Menu,
-  Users,
   Search,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
