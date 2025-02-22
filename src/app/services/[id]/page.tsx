@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ServiceGallery } from "@/components/service-gallery"
-import { Reviews } from "@/components/reviews"
+//import { Reviews } from "@/components/reviews"
 import { ServiceDescription } from "@/components/service-description"
 
 export default function ServicePage() {
@@ -27,7 +27,7 @@ export default function ServicePage() {
               <ServiceDescription />
             </TabsContent>
             <TabsContent value="reviews">
-              <Reviews />
+            reviews
             </TabsContent>
           </Tabs>
         </div>
