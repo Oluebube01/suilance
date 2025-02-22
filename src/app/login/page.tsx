@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ZkLogin } from "@/components/zk-login"
+//import { ZkLogin } from "@/components/zk-login"
 import Link from "next/link"
 
 export default function LoginPage() {
@@ -14,26 +14,26 @@ export default function LoginPage() {
   const [password, setPassword] = useState("")
   const router = useRouter()
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+ // const handleSubmit = (e: React.FormEvent) => {
+ //   e.preventDefault()
     // Here you would typically handle the traditional login logic
-    console.log("Traditional login attempt with:", { email, password })
+  //  console.log("Traditional login attempt with:", { email, password })
     // For now, we'll just redirect to the home page
-    router.push("/")
-  }
+  //  router.push("/")
+//  }
 
-  const handleZkLoginSuccess = (address: string) => {
-    console.log("zkLogin successful. User address:", address)
+ // const handleZkLoginSuccess = (address: string) => {
+  //  console.log("zkLogin successful. User address:", address)
     // Here you would typically handle the successful zkLogin
     // For example, you might set the user's session or redirect them
-    router.push("/")
-  }
+   // router.push("/")
+//  }
 
-  const handleZkLoginError = (error: string) => {
-    console.error("zkLogin error:", error)
+//  const handleZkLoginError = (error: string) => {
+  //  console.error("zkLogin error:", error)
     // Here you would typically handle the zkLogin error
     // For example, you might show an error message to the user
-  }
+//  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-[#1a1a2e] p-4">
@@ -89,9 +89,9 @@ export default function LoginPage() {
               </div>
             </div>
           </div>
-          <div className="mt-4">
-            <ZkLogin onSuccess={handleZkLoginSuccess} onError={handleZkLoginError} />
-          </div>
+          {/* <div className="mt-4">
+           <ZkLogin onSuccess={handleZkLoginSuccess} onError={handleZkLoginError} />
+          </div> */}
         </CardContent>
         <CardFooter className="flex justify-center">
           <div>
