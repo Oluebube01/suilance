@@ -12,7 +12,7 @@ import Link from "next/link"
 export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const router = useRouter()
+  //const router = useRouter()
 
  // const handleSubmit = (e: React.FormEvent) => {
  //   e.preventDefault()
