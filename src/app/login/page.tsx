@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-//import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -12,15 +12,15 @@ import Link from "next/link"
 export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  //const router = useRouter()
+  const router = useRouter()
 
- // const handleSubmit = (e: React.FormEvent) => {
- //   e.preventDefault()
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
     // Here you would typically handle the traditional login logic
-  //  console.log("Traditional login attempt with:", { email, password })
+    console.log("Traditional login attempt with:", { email, password })
     // For now, we'll just redirect to the home page
-  //  router.push("/")
-//  }
+    router.push("/")
+  }
 
  // const handleZkLoginSuccess = (address: string) => {
   //  console.log("zkLogin successful. User address:", address)
