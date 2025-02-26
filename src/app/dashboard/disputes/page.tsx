@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { toast } from "@/components/ui/use-toast"
+// import { toast } from "@/components/ui/use-toast"
 
 export default function DisputesPage() {
   const [disputeType, setDisputeType] = useState("")
@@ -19,10 +19,10 @@ export default function DisputesPage() {
     e.preventDefault()
     // Here you would typically send this data to your backend
     console.log({ disputeType, description, relatedOrderId })
-    toast({
-      title: "Dispute Submitted",
-      description: "Your dispute has been successfully submitted. We'll get back to you soon.",
-    })
+    // toast({
+    //   title: "Dispute Submitted",
+    //   description: "Your dispute has been successfully submitted. We'll get back to you soon.",
+    // })
     // Reset form
     setDisputeType("")
     setDescription("")
