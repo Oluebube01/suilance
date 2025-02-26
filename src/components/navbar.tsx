@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
+  { name: "Home", href: "/" },
   { name: "Find Work", href: "/find-work" },
   { name: "Find Talent", href: "/find-talent" },
   { name: "About Us", href: "/about-us" },
+  { name: "Community", href: "/community" }
 ]
 
 export function Navbar() {

@@ -1,10 +1,13 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 export default function AboutUsPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+    <div className="min-h-screen bg-gradient-to-b from-black to-[#1a1a2e]  px-4">
+      <Navbar />
+      <h1 className="mt-16 text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
         About SUILANCE
       </h1>
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -46,6 +49,7 @@ export default function AboutUsPage() {
           </Card>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

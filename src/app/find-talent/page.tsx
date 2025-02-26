@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Search, Star } from "lucide-react"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 const skillCategories = [
   "Programming & Tech",
@@ -23,8 +25,9 @@ const topFreelancers = [
 
 export default function FindTalentPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+    <div className="min-h-screen bg-gradient-to-b from-black to-[#1a1a2e]  px-4">
+      <Navbar />
+      <h1 className="mt-16 text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
         Find Talent
       </h1>
       <div className="max-w-2xl mx-auto mb-12">
@@ -87,6 +90,7 @@ export default function FindTalentPage() {
           </Card>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
